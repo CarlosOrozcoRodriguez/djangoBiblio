@@ -13,3 +13,11 @@ python manage.py runserver
 python manage.py makemigrations
 
 python manage.py migrate
+
+# insertar datos a traves de shell
+python .\manage.py shell
+>>>
+from biblio.models import Book
+
+book1 = Book(title='El gran Gatsby', author='F. Scott Fitzgerald', genre='Ficción', year=1925, publisher='Scribner')
+book1.save()
